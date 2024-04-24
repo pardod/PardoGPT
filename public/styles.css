@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* This ensures the body takes up the full height of the viewport */
+    width: 100%; /* This ensures the body takes up the full width of the viewport */
+    background-color: #48817e; /* Set your background color here */
+}
+
+* {
+    background-color: #48817e;
+}
+
+#main {
+    min-height: 90vh; 
+    padding-bottom: 10%; /* Adjust this value to be equal to or greater than the height of your #text div */
+    position: relative; /* Makes sure that padding is inside the #main div */
+    overflow: auto; /* Enables scrolling on the #main div if the content is taller than the viewport */
+}
+
+#text {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #294948;
+}
+
+#userPrompt {
+    width: 80%;
+    height: 40px;
+    font-size: 2vh;
+    padding: 12px; 
+    background: rgb(31, 32, 35);
+    border: 1px solid rgb(60, 63, 68);
+    border-radius: 4px;
+    color: rgb(247, 248, 248);
+    appearance: none;
+    transition: border 0.15s ease 0s;
+}
+
+#userPrompt:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: rgb(100, 153, 255);
+}
+
+#submit {
+    width: 15%;
+    height: 60px; 
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 40px; 
+    padding: 0; 
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+
+
+#submit:disabled {
+    pointer-events: none;
+}
+
+#submit:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+#submit:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+#response {
+    width: 60%;
+    max-height: 80%;
+    font-size: 2vh;
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0; bottom: 10%; left: 0;
+    overflow-y: auto; 
+}
+
+#apiResponse {
+    max-width: 100%;
+    padding: 10px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    color:#FFFFFF;
+}
+
+#header {
+    text-align: center;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+h5 {
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+re {
+    background-color: #282c34; /* Dark background */
+    border-radius: 6px; /* Rounded corners */
+    padding: 1em; /* Padding inside the code block */
+    overflow-x: auto; /* Horizontal scrolling if the code is too long */
+    margin-bottom: 1em; /* Spacing below each code block */
+  }
+  
+  code {
+    color: #abb2bf; /* A lighter text color for contrast */
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace; /* Monospaced font for code */
+    font-size: 0.95em; /* Slightly smaller font size */
+  }
