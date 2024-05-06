@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Fallback to 3000 if PORT isn't set
 
 // Middleware to serve static files
 app.use(express.static('public'));
